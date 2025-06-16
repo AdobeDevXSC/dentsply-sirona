@@ -20,13 +20,13 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: Montserrat, sans-serif, roboto, roboto-fallback;
+  --heading-font-family: Montserrat, sans-serif, roboto-condensed, roboto-condensed-fallback;
 
   /* body sizes */
   --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-s: 18px;
+  --body-font-size-xs: 16px;
 
   /* heading sizes */
   --heading-font-size-xxl: 55px;
@@ -174,7 +174,7 @@ button {
   margin: 12px 0;
   border: 2px solid transparent;
   border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  padding: .4em 1.4em;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
@@ -205,9 +205,14 @@ button:disabled:hover {
 
 a.button.secondary,
 button.secondary {
-  background-color: unset;
+  background-color: #333f4c;
   border: 2px solid currentcolor;
-  color: var(--text-color);
+  color: white;
+}
+
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: #000;
 }
 
 main img {
