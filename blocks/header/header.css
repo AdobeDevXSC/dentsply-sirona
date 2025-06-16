@@ -16,7 +16,7 @@ header nav {
   gap: 0 24px;
   margin: auto;
   max-width: 1400px;
-  height: var(--nav-height);
+  /* height: var(--nav-height); */
   padding: 0 24px;
   font-family: var(--body-font-family);
 }
