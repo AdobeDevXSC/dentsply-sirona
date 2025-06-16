@@ -162,5 +162,11 @@ export default async function decorate(block) {
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
+
+  const sections = navWrapper.querySelectorAll('.section');
+  const lastSection = sections[sections.length - 1];
+  lastSection.classList.add('announcement-bar');
+  navWrapper.prepend(lastSection);
+
   block.append(navWrapper);
 }

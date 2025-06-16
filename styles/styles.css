@@ -125,7 +125,7 @@ ol,
 ul,
 pre,
 blockquote {
-  margin-top: 0.8em;
+  margin-top: 0.25em;
   margin-bottom: 0.25em;
 }
 
@@ -238,7 +238,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: 1700px;
   margin: auto;
   padding: 0 24px;
 }
@@ -259,4 +259,14 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+header .section.black-bg,
+main .section.black-bg {
+  background-color: #000;
+  color: #fff;
+}
+
+main .section.full-width > div {
+  max-width: 100%;
 }
