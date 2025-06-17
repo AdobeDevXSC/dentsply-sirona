@@ -38,6 +38,12 @@
   height: 100%;
 }
 
+.hero > div:last-of-type {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;

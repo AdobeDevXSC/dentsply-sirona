@@ -29,9 +29,9 @@
   --body-font-size-xs: 16px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 36px;
+  --heading-font-size-xxl: 44px;
+  --heading-font-size-xl: 38px;
+  --heading-font-size-l: 32px;
   --heading-font-size-m: 28px;
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 20px;
@@ -40,7 +40,7 @@
   --nav-height: 64px;
 
   /* max-width of sections */
-  --max-width: 1600px;
+  --max-width: 1700px;
 }
 
 /* fallback fonts */
@@ -107,7 +107,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.25em;
+  margin-top: 0.55em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
   font-weight: 600;

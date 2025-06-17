@@ -25,6 +25,7 @@
   max-width: var(--max-width);;
   padding: 1rem;
   width: 100%;
+  margin: 0 auto;
 }
 
 .highlight.promo .button-container {
@@ -33,7 +34,7 @@
 
 /* quote variation */
 .highlight.quote {
-  padding: 2rem;
+  padding: 4rem;
 }
 
 .highlight.quote > div:last-child {
@@ -47,6 +48,12 @@
 .highlight.quote > div:last-child > div * {
   line-height: 1.5;
   font-weight: 500;
+}
+
+@media (width <= 900px) {
+  .highlight.quote {
+    padding: 2rem;
+  }
 }
 
 
