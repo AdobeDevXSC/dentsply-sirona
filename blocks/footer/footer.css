@@ -6,7 +6,7 @@ footer {
 
 footer .footer > div {
   margin: auto;
-  max-width: 1700px;
+  max-width: 1600px;
   padding: 40px 24px 24px;
 }
 
@@ -44,7 +44,7 @@ footer .footer .section:nth-of-type(1) > div > ul {
 }
 
 footer .footer .section:nth-of-type(1) > div > ul > li {
-  max-width: 260px;
+  max-width: 240px;
   width: 100%;
 }
 

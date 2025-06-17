@@ -165,6 +165,25 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Text Align: Left",
+            "value": "text-left"
+          },
+          {
+            "name": "Text Align: Center",
+            "value": "text-center"
+          },
+          {
+            "name": "Text Align: Right",
+            "value": "text-right"
+          }
+        ]
       }
     ]
   },

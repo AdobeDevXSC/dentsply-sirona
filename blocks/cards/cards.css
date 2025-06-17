@@ -1,3 +1,18 @@
+.cards {
+  padding: 2rem 0;
+}
+
+/* alignment */
+.cards.text-left {
+  text-align: left;
+}
+.cards.text-center {
+  text-align: center;
+}
+.cards.text-right {
+  text-align: right;
+}
+
 .cards > ul {
   display: grid;
   grid-template-columns: 1fr;
@@ -10,12 +25,12 @@
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
   background-color: var(--background-color);
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3);
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  margin: 2.65em;
 }
 
 .cards .cards-card-image {
@@ -24,8 +39,8 @@
 
 .cards > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
+  padding: 1rem 0;
 }
 
 

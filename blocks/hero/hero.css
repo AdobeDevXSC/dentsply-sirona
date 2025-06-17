@@ -14,10 +14,14 @@
 }
 
 .hero h1 {
-  color: var(--background-color);
+  color: #fff;
   font-size: 68px;
   margin: 0;
   margin-bottom: 3rem;
+}
+
+.hero h3 {
+  color: #fff;
 }
 
 .hero picture {
