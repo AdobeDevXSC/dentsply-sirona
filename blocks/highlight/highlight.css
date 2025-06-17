@@ -7,6 +7,11 @@
   overflow: hidden;
 }
 
+.highlight.quote > div:last-child {
+  position: relative;
+  z-index: 1;
+}
+
 .highlight > div:first-child picture,
 .highlight > div:first-child img {
   position: absolute;
@@ -20,8 +25,6 @@
 
 /* promo variation */
 .highlight.promo > div:last-child {
-  position: relative;
-  z-index: 1;
   max-width: var(--max-width);;
   padding: 1rem;
   width: 100%;
@@ -38,9 +41,7 @@
 }
 
 .highlight.quote > div:last-child {
-  position: relative;
   padding: 2rem;
-  z-index: 1;
   max-width: 35rem;
   background: rgba(16, 106, 197, 0.85);
 }
