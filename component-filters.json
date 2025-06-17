@@ -16,13 +16,20 @@
       "cards",
       "columns",
       "fragment",
-      "highlight"
+      "highlight",
+      "Carousel"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
     ]
   },
   {
