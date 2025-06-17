@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-.highlight.quote > div:last-child {
+.highlight > div:last-child {
   position: relative;
   z-index: 1;
 }
@@ -25,6 +25,7 @@
 
 /* promo variation */
 .highlight.promo > div:last-child {
+  position: relative;
   max-width: var(--max-width);;
   padding: 1rem;
   width: 100%;
