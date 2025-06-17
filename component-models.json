@@ -153,20 +153,20 @@
     "id": "cards",
     "fields": [
       {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
+        "component": "select",
+        "name": "classes",
+        "label": "classes",
         "options": [
           {
-            "name": "Text Align: Left",
+            "name": "Align: Left",
             "value": "text-left"
           },
           {
-            "name": "Text Align: Center",
+            "name": "Align: Center",
             "value": "text-center"
           },
           {
-            "name": "Text Align: Right",
+            "name": "Align: Right",
             "value": "text-right"
           }
         ]
