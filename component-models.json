@@ -155,18 +155,18 @@
       {
         "component": "select",
         "name": "classes",
-        "label": "classes",
+        "label": "Classes",
         "options": [
           {
-            "name": "Align: Left",
+            "name": "align-Left",
             "value": "text-left"
           },
           {
-            "name": "Align: Center",
+            "name": "align-center",
             "value": "text-center"
           },
           {
-            "name": "Align: Right",
+            "name": "align-right",
             "value": "text-right"
           }
         ]
