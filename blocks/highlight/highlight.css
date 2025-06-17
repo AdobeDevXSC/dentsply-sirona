@@ -1,15 +1,14 @@
-.highlight.promo {
+.highlight {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   text-align: left;
   min-height: 240px;
   overflow: hidden;
 }
 
-.highlight.promo > div:first-child picture,
-.highlight.promo > div:first-child img {
+.highlight > div:first-child picture,
+.highlight > div:first-child img {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,6 +18,7 @@
   z-index: 0;
 }
 
+/* promo variation */
 .highlight.promo > div:last-child {
   position: relative;
   z-index: 1;
@@ -31,7 +31,26 @@
   margin-top: 16px;
 }
 
-/* style classes */
+/* quote variation */
+.highlight.quote {
+  padding: 2rem;
+}
+
+.highlight.quote > div:last-child {
+  position: relative;
+  padding: 2rem;
+  z-index: 1;
+  max-width: 35rem;
+  background: rgba(16, 106, 197, 0.85);
+}
+
+.highlight.quote > div:last-child > div * {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+
+/* Utility: style classes */
 .highlight.text-white * {
   color: #fff;
 }
