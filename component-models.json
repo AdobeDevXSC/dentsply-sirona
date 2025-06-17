@@ -251,32 +251,36 @@
     "id": "highlight",
     "fields": [
       {
-        "component": "select",
+        "component": "multiselect",
         "name": "classes",
-        "label": "Variation",
+        "value": "",
+        "label": "Styles",
         "options": [
           {
-            "name": "Promotion",
-            "value": "promo"
+            "name": "Block Variation",
+            "children": [
+              {
+                "name": "Promotion",
+                "value": "promo"
+              },
+              {
+                "name": "Quote",
+                "value": "quote"
+              }
+            ]
           },
           {
-            "name": "Quote",
-            "value": "quote"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "style",
-        "label": "Text Color",
-        "options": [
-          {
-            "name": "White",
-            "value": "text-white"
-          },
-          {
-            "name": "Black",
-            "value": "text-black"
+            "name": "Text Color",
+            "children": [
+              {
+                "name": "White",
+                "value": "text-white"
+              },
+              {
+                "name": "Black",
+                "value": "text-black"
+              }
+            ]
           }
         ]
       },
