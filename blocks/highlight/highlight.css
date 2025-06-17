@@ -1,0 +1,40 @@
+.highlight.promo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  min-height: 240px;
+  overflow: hidden;
+}
+
+.highlight.promo > div:first-child picture,
+.highlight.promo > div:first-child img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.highlight.promo > div:last-child {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);;
+  padding: 1rem;
+  width: 100%;
+}
+
+.highlight.promo .button-container {
+  margin-top: 16px;
+}
+
+/* style classes */
+.highlight.text-white * {
+  color: #fff;
+}
+.highlight.text-black * {
+  color: #000;
+}

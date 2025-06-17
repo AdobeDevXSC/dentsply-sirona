@@ -33,11 +33,14 @@
   --heading-font-size-xl: 44px;
   --heading-font-size-l: 36px;
   --heading-font-size-m: 28px;
-  --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
+  --heading-font-size-s: 24px;
+  --heading-font-size-xs: 20px;
 
   /* nav height */
   --nav-height: 64px;
+
+  /* max-width of sections */
+  --max-width: 1600px;
 }
 
 /* fallback fonts */
@@ -65,8 +68,8 @@
     --heading-font-size-xl: 48px;
     --heading-font-size-l: 36px;
     --heading-font-size-m: 28px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+    --heading-font-size-s: 24px;
+    --heading-font-size-xs: 20px;
   }
 }
 
@@ -104,7 +107,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
+  margin-top: 0.25em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
   font-weight: 600;
@@ -239,7 +242,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1600px;
+  max-width: var(--max-width);;
   margin: auto;
   padding: 0 24px;
 }
@@ -268,6 +271,11 @@ main .section.black-bg {
   color: #fff;
 }
 
+main .section.full-width {
+  padding: 0;
+}
+
 main .section.full-width > div {
   max-width: 100%;
+  padding: 0;
 }

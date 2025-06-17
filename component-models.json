@@ -266,6 +266,21 @@
         ]
       },
       {
+        "component": "select",
+        "name": "style",
+        "label": "Text Color",
+        "options": [
+          {
+            "name": "White",
+            "value": "text-white"
+          },
+          {
+            "name": "Black",
+            "value": "text-black"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
