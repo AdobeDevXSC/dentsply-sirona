@@ -158,7 +158,7 @@
         "label": "Classes",
         "options": [
           {
-            "name": "align-Left",
+            "name": "align-left",
             "value": "text-left"
           },
           {

@@ -30,7 +30,7 @@
 }
 
 .cards .cards-card-body {
-  margin: 2.65em;
+  margin: 1.5em;
 }
 
 .cards .cards-card-image {
@@ -48,5 +48,9 @@
   .cards > ul {
     grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
     grid-auto-rows: 1fr;
+  }
+
+  .cards .cards-card-body {
+    margin: 2.65em;
   }
 }

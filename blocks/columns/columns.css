@@ -1,6 +1,7 @@
 .columns > div {
   display: flex;
   flex-direction: column;
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3);  
 }
 
 .columns img {
@@ -17,6 +18,10 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+}
+
+.columns > div > div:not(.columns-img-col) {
+  padding: 1.5rem;
 }
 
 @media (width >= 900px) {
