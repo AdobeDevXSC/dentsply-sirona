@@ -33,16 +33,18 @@ export default function decorate(block) {
   slides.forEach((slide, index) => {
     // Extract all text elements: headings (h1-h6) and paragraphs
     const textElements = Array.from(slide.querySelectorAll('h1,h2,h3,h4,h5,h6,p'));
-    if (textElements.length === 0) return;
 
     // Save their outerHTML to preserve tags
     const descriptionHTML = textElements.map(el => el.outerHTML).join('');
 
     // Remove those text elements from the slide
+    
     textElements.forEach(el => el.parentElement.remove());
 
-    // Add slide to the track
-    track.appendChild(slide);
+    if (textElements.length !== 0) {
+      // Add slide to the track
+      track.appendChild(slide);
+    }
 
     // Store the extracted description HTML for later
     slideDescriptions.push(descriptionHTML);
@@ -69,10 +71,8 @@ export default function decorate(block) {
    * @param {number} index - Index of the slide to display
    */
   const updateDescription = (index) => {
-    if (slideDescriptions[index]) {
-      description.innerHTML = slideDescriptions[index];
-    }
-    
+    description.innerHTML = slideDescriptions[index];
+
     // Update active/inactive classes on slides
     slides.forEach((el, i) => {
       el.classList.toggle('inactive', i !== index);
