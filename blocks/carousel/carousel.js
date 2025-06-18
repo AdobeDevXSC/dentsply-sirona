@@ -41,10 +41,8 @@ export default function decorate(block) {
     
     textElements.forEach(el => el.parentElement.remove());
 
-    if (textElements.length !== 0) {
-      // Add slide to the track
-      track.appendChild(slide);
-    }
+    // Add slide to the track
+    track.appendChild(slide);
 
     // Store the extracted description HTML for later
     slideDescriptions.push(descriptionHTML);
