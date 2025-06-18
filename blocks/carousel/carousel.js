@@ -26,33 +26,28 @@ export default function decorate(block) {
 
   // Get all slides from the original block content
   const slides = Array.from(block.children);
-  
-  // Process each slide
-  slides.forEach((slide, index) => {
-    // Extract name from h4 or default to empty string
-    const name = slide.querySelector('h4')?.textContent || '';
-    
-    // Extract subtitle from h5, p, or img alt text (fallback chain)
-    const subtitle = slide.querySelector('h5')?.textContent ||
-      slide.querySelector('p')?.textContent ||
-      slide.querySelector('img')?.alt || '';
 
-    // Remove all text elements (h4, h5, p) from the slide
-    // since we'll display them in the description area instead
-    ['h4', 'h5', 'p'].forEach(tag => {
-      const el = slide.querySelector(tag);
-      if (el) el.parentElement.remove();
-    });
+  // Store extracted descriptions separately
+  const slideDescriptions = [];
+
+  slides.forEach((slide, index) => {
+    // Extract all text elements: headings (h1-h6) and paragraphs
+    const textElements = Array.from(slide.querySelectorAll('h1,h2,h3,h4,h5,h6,p'));
+
+    // Save their outerHTML to preserve tags
+    const descriptionHTML = textElements.map(el => el.outerHTML).join('');
+
+    // Remove those text elements from the slide
+    textElements.forEach(el => el.parentElement.remove());
 
     // Add slide to the track
     track.appendChild(slide);
-    
-    // Mark all slides except first as inactive
-    if (index !== 0) slide.classList.add('inactive');
 
-    // Store extracted text in dataset for later use
-    slide.dataset.name = name;
-    slide.dataset.subtitle = subtitle;
+    // Store the extracted description HTML for later
+    slideDescriptions.push(descriptionHTML);
+
+    // Mark all slides except the first as inactive
+    if (index !== 0) slide.classList.add('inactive');
   });
 
   // Build the DOM structure
@@ -73,15 +68,7 @@ export default function decorate(block) {
    * @param {number} index - Index of the slide to display
    */
   const updateDescription = (index) => {
-    const slide = slides[index];
-    const name = slide.dataset.name || '';
-    const subtitle = slide.dataset.subtitle || '';
-
-    // Update description HTML
-    description.innerHTML = `
-      <h4>${name}</h4>
-      <h5>${subtitle}</h5>
-    `;
+    description.innerHTML = slideDescriptions[index];
 
     // Update active/inactive classes on slides
     slides.forEach((el, i) => {
@@ -95,7 +82,6 @@ export default function decorate(block) {
 
   // Add click handler for navigation button
   nav.addEventListener('click', () => {
-    // Cycle to next slide (wraps around if at end)
     currentIndex = (currentIndex + 1) % slides.length;
     updateDescription(currentIndex);
   });
